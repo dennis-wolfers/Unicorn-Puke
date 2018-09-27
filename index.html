@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Unicorn Puke</title>
+  <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+</head>
+
+<body>
+  <script>
+    const entered = [];
+    const code = 'u';
+    window.addEventListener('keyup', e => {
+      entered.push(e.key);
+      entered.splice(-code.length - 1, entered.length - code.length);
+      if (entered.join('').includes(code)) {
+        cornify_add();
+      }
+    });
+  </script>
+</body>
+
+</html>
